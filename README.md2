@@ -1,1 +1,192 @@
+# SkillPath 🚀
 
+> Map your journey through **software engineering** and **every programming language** — with a visual path view and a learning calendar.
+
+<!-- Replace "SkillPath" with your project name. Add badges below. -->
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+
+---
+
+## 📖 About
+
+**SkillPath** is a web app that helps you plan, track, and grow your programming skills. Pick what you want to learn, see the whole route laid out as a path, and schedule your study time on a calendar.
+
+It covers:
+
+- **Software engineering** — algorithms, data structures, system design, databases, testing, DevOps, version control, architecture, and more
+- **Programming languages** — Python, JavaScript/TypeScript, Java, C/C++, C#, Go, Rust, PHP, Swift, Kotlin, SQL, and others
+- **Web & app development** — frontend, backend, full-stack, mobile
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🧭 **Path View** | Visual roadmap showing skills, prerequisites, and the order to learn them |
+| 📅 **Calendar View** | Schedule lessons, practice sessions, and deadlines; see your week or month at a glance |
+| 📚 **Skill Library** | Browse skills by category (engineering topics or languages) |
+| ✅ **Progress Tracking** | Mark skills as *Not started / In progress / Completed* |
+| 🎯 **Goals** | Set a target (e.g. "Become a backend developer") and get a suggested path |
+| 🔍 **Search & Filter** | Find skills by language, level, or topic |
+| 🌗 **Light / Dark Mode** | Comfortable on any screen |
+
+---
+
+## 🗺️ How the Path View Works
+
+Each skill is a **node**. Lines between nodes show **prerequisites**.
+
+```
+Programming Basics ──► Data Structures ──► Algorithms ──► System Design
+        │                                        │
+        └──► Git & Version Control               └──► Competitive Programming
+```
+
+- **Gray** = locked (prerequisite not done)
+- **Blue** = available
+- **Yellow** = in progress
+- **Green** = completed
+
+Click any node to see resources, estimated time, and to add it to your calendar.
+
+---
+
+## 📅 Calendar View
+
+- Day / Week / Month layouts
+- Drag and drop to reschedule study sessions
+- Link events to skills on your path
+- Optional reminders and recurring sessions (e.g. "Python practice — every Mon & Wed")
+
+---
+
+## 🛠️ Tech Stack
+
+<!-- Edit to match what you actually use -->
+
+| Layer | Technology |
+|---|---|
+| Frontend | React / Next.js, Tailwind CSS |
+| Path graph | React Flow (or D3.js) |
+| Calendar | FullCalendar |
+| Backend | Node.js + Express (or your choice) |
+| Database | PostgreSQL / MongoDB |
+| Auth | JWT / OAuth |
+| Hosting | Vercel / Render / Docker |
+
+---
+
+## 🚦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Git
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/<your-username>/skillpath.git
+cd skillpath
+
+# 2. Install dependencies
+npm install
+
+# 3. Set up environment variables
+cp .env.example .env
+
+# 4. Start the development server
+npm run dev
+```
+
+Open **http://localhost:3000** in your browser.
+
+### Environment Variables
+
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
+PORT=3000
+```
+
+---
+
+## 📁 Project Structure
+
+```
+skillpath/
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # App pages (Path, Calendar, Library)
+│   ├── data/            # Skill definitions & prerequisites
+│   ├── hooks/           # Custom React hooks
+│   ├── services/        # API calls
+│   └── styles/          # Global styles
+├── server/              # Backend API
+├── public/              # Static assets
+├── .env.example
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧩 Adding a New Skill
+
+Skills are defined in `src/data/skills.json`:
+
+```json
+{
+  "id": "python-basics",
+  "name": "Python Basics",
+  "category": "language",
+  "level": "beginner",
+  "estimatedHours": 20,
+  "prerequisites": [],
+  "resources": [
+    { "title": "Official Python Tutorial", "url": "https://docs.python.org/3/tutorial/" }
+  ]
+}
+```
+
+---
+
+## 🛣️ Roadmap
+
+- [x] Skill library
+- [x] Path view
+- [ ] Calendar view
+- [ ] User accounts & saved progress
+- [ ] Goal-based path suggestions
+- [ ] Coding challenges per skill
+- [ ] Community-contributed paths
+- [ ] Mobile app
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m "Add amazing feature"`
+4. Push: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for details.
+
+---
+
+## 📬 Contact
+
+**Your Name** — [your.email@example.com](mailto:your.email@example.com)
+Project link: [https://github.com/your-username/skillpath](https://github.com/your-username/skillpath)
